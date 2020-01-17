@@ -1,5 +1,5 @@
 body{
-    font-size: 1.5rem;
+    font-size: 10px;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -48,6 +48,13 @@ h1{
     transition-duration: 0.25s;
 }
 .pad:active{
+    background-image: radial-gradient( #42ff52, #00ad0e);
+    box-shadow: -0.1rem -0.1rem 1rem 0.1rem #ff3c3c;
+    box-shadow: 0.1rem 0.1rem 1rem 0.1rem rgb(255, 0, 0);
+    transition-duration: 0.05s;
+}
+
+.active{
     background-image: radial-gradient( #42ff52, #00ad0e);
     box-shadow: -0.1rem -0.1rem 1rem 0.1rem #ff3c3c;
     box-shadow: 0.1rem 0.1rem 1rem 0.1rem rgb(255, 0, 0);

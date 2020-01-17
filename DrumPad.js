@@ -13,31 +13,41 @@ drums.forEach(drumElem =>{
     obj.push(drumElem);
 })
 
-document.addEventListener('keydown', drumKey => {
-    let key = event.keyCode || event.which;
-    let keyVal = key.toString();
-    let keyIndex = drumPads.indexOf(keyVal);
-    console.log(`naciśnięto ${keyVal}`);
-    console.log(`index ${keyVal}: ${keyIndex}`);
-
-    for(i=0; i<drums.length; i++) {
-        if(keyIndex==i){
-            const drumSrc = document.getElementById(drums[i].dataset.drum);
-            drumSrc.currentTime = 0;
-            drumSrc.play();
-        }
-    }1
-}
-
-)
-
-//console.log(drums)
-
-    playDrum = (drumElem) => {
+playDrum = (drumElem) => {
     const drumSrc = document.getElementById(drumElem.dataset.drum);
     drumSrc.currentTime = 0;
     drumSrc.play();
 
-
-
 }
+
+
+document.addEventListener('keydown', drumKey => {
+
+    let key = event.keyCode || event.which;
+    let keyVal = key.toString();
+    let keyIndex = drumPads.indexOf(keyVal);
+
+    //console.log(`naciśnięto ${keyVal}`);
+    //console.log(`index ${keyVal}: ${keyIndex}`);
+
+    for(i=0; i<drums.length; i++) {
+        if(keyIndex==i){
+
+            const drumSrc = document.getElementById(drums[i].dataset.drum);
+            drumSrc.currentTime = 0;
+            drumSrc.play();
+            x=drums[i];
+
+            x.classList.add('active');
+            console.log(x);
+            document.addEventListener('keyup', padOff =>{
+            x.classList.remove('active');
+            console.log(x);
+            })
+
+        }
+
+
+    }
+}
+);
