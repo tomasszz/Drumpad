@@ -3,7 +3,7 @@ body{
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    border: 5px solid #0049af;
+
 
 
 }
@@ -12,9 +12,9 @@ h1{
     text-align: center;
 }
 #main{
-    margin: 0 auto;
-    padding: 0 auto;
-    background-color: aliceblue;
+    margin: auto 0.5rem;
+    padding: 0.5rem;
+
 }
 
 #drumPad{
