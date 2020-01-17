@@ -5,6 +5,7 @@ body{
     padding: 0;
     border: 5px solid #0049af;
 
+
 }
 
 h1{
@@ -13,6 +14,7 @@ h1{
 #main{
     margin: 0 auto;
     padding: 0 auto;
+    background-color: aliceblue;
 }
 
 #drumPad{
@@ -30,10 +32,10 @@ h1{
 }
 
 .pad{
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 0.1rem;
-    padding: 0.1rem;
+    width: 4rem;
+    height: 4rem;
+    margin: auto;
+    padding: auto;
     border-radius: 5px;
     box-shadow: -0.1rem -0.1rem 1rem 0.1rem #ffffff;
     box-shadow: 0.1rem 0.1rem 1rem 0.1rem #A3B1C6;
