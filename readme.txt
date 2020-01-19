@@ -1,6 +1,8 @@
-Drumpad v1.5
+Drumpad v1.6
 
-You can use mouse to play or keyboard.
+- Works best on Chrome.
+
+You can use mouse or keyboard to play.
 
 Key mapping acording drumpads layout:
 

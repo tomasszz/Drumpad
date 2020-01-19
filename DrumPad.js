@@ -37,24 +37,29 @@ document.addEventListener('keydown', drumKey => {
 
     //console.log(`naciśnięto ${keyVal}`); // helper
     //console.log(`index ${keyVal}: ${keyIndex}`); // helper
-
+    drums.forEach(pad =>{
+        if(pad.classList!='pad')
+        pad.classList="pad"
+        })
     //comparing index value of pressed key with drums table
+
     for(i=0; i<drums.length; i++) {
         if(keyIndex==i){
+            x=drums[i]; //helper variable for setting class style
+
+            //setting pad class style for pressed key
+            x.classList.add('active');
 
             //selecting proper sample
             const drumSrc = document.getElementById(drums[i].dataset.drum);
             drumSrc.currentTime = 0;
             drumSrc.play();
 
-            //helper variable for setting class style
-            x=drums[i];
-            //setting pad class style for pressed key
-            x.classList.add('active');
-            console.log(x);
-            document.addEventListener('keyup', padOff =>{
+            //console.log(x);
+            window.addEventListener('keyup', padOff =>{
             x.classList.remove('active');
-            console.log(x);
+            //console.log(x);
+
             })
 
         }
